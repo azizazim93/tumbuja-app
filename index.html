@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ar">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Aplikasi TUMBUJA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@400;700;900&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <div class="logo-title" dir="ltr">
+      <h1 class="app-title">JOM TUMBUJA!</h1>
+      <img src="TUMBUJA LOGO.png" alt="Logo TUMBUJA" class="logo">
+    </div>
+    <div class="background-overlay"></div>
+    <span class="sub-title">TUMBUK.BUNYI.EJA</span>
+    <h2>Aplikasi Pembelajaran <span class="highlight">Bunyi Huruf Hijaiyyah Berbaris</span></h2>
+    <p dir="ltr">Genggamkan tangan, tiru gaya dan buat muka mengikut baris!✨</p>
 
+        <div class="section">
+            <h2 dir="ltr">Pilih Huruf:</h2>
+            <div id="huruf-container" class="button-group"></div>
+        </div>
+
+        <div class="section">
+            <h2 dir="ltr">Pilih Baris:</h2>
+            <div class="button-group">
+                <button class="harakat-button" data-harakat="fathah">َ</button>
+                <button class="harakat-button" data-harakat="kasrah">ِ</button>
+                <button class="harakat-button" data-harakat="dammah">ُ</button>
+            </div>
+        </div>
+
+        <div class="output">
+            <div class="output-box"><div id="output-huruf">؟</div></div>
+            <div class="output-box"><div id="output-gesture">🖐️</div><p id="gesture-label">-</p></div>
+            <div class="output-box"><div id="output-emoji">😐</div></div>
+        </div>
+
+        <p class="note">Nota: Audio belum dimuat naik. Guna URL fail audio sebenar dalam kod nanti.</p>
+
+        <audio id="audio-player" controls style="margin-top: 20px; display: none;"></audio>
+    <audio id="bg-music" autoplay loop hidden>
+      <source src="TUMBUJA AUDIO.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
