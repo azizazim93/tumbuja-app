@@ -77,3 +77,11 @@ const bgMusic = document.getElementById("bg-music");
 if (bgMusic) {
     bgMusic.volume = 0.4; // 35% bunyi
 }
+
+window.addEventListener('click', () => {
+  const bgMusic = document.getElementById("bg-music");
+  if (bgMusic) {
+    bgMusic.volume = 0.4;
+    bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+  }
+}, { once: true });
