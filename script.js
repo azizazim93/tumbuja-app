@@ -61,6 +61,13 @@ function updateOutput() {
     void gestureOutput.offsetWidth; // untuk reset animasi
     gestureOutput.classList.add("animate-gesture");
 
+    // Rotate gesture bila kasrah
+    if (selectedHarakat === "kasrah") {
+        gestureOutput.style.transform = "rotate(180deg)";
+    } else {
+        gestureOutput.style.transform = "rotate(0deg)";
+    }
+
     document.getElementById("gesture-label").innerText = padanan[selectedHarakat].label;
 
     // Audio playback
